@@ -1,0 +1,181 @@
+/* src/styles/layout.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #e0f2fe, #eff6ff 40%, #ffffff 80%);
+  color: #020617;
+}
+
+a {
+  color: inherit;
+}
+
+/* App shell */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2.4rem;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.nav-links a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.18s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-logout {
+  margin-left: 1.2rem;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-logout:hover {
+  text-decoration: underline;
+}
+
+/* Main area */
+.app-main {
+  flex: 1;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+.app-footer {
+  padding: 0.8rem 1.4rem;
+  text-align: center;
+  font-size: 0.85rem;
+  background: rgba(15, 23, 42, 0.92);
+  color: #9ca3af;
+}
+
+/* Hero on home page */
+.hero {
+  max-width: 780px;
+  width: 100%;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 2.2rem 2.4rem;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.hero-card h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+
+.hero-card p {
+  margin: 0 0 0.9rem;
+  color: #4b5563;
+}
+
+/* Hero buttons */
+.hero-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* shared pill button (same for both) */
+.hero-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+/* blue primary like login – for Sign up as User */
+.btn-primary {
+  background: #0095f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #007ed1;
+}
+
+/* white outlined secondary – for Log in as Admin */
+.btn-secondary {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #f3f4f6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .app-header {
+    padding: 0.8rem 1.1rem;
+  }
+
+  .nav-links a {
+    margin-left: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-card {
+    padding: 1.7rem 1.4rem;
+  }
+
+  .hero-card h1 {
+    font-size: 1.6rem;
+  }
+}
