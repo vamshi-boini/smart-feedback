@@ -21,9 +21,7 @@ function Layout({ children }) {
           <Link to="/user">Dashboard</Link>
       
 
-          <button className="nav-logout" onClick={handleLogout}>
-            Logout
-          </button>
+          
         </nav>
       </header>
 

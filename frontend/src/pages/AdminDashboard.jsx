@@ -220,7 +220,7 @@ export default function AdminDashboard() {
       </div>
 
       <p className="admin-footnote">
-        Data is now loaded from the backend API; actions update MongoDB.
+        Admin place
       </p>
     </div>
   );
